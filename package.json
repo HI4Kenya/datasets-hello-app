@@ -1,6 +1,7 @@
 {
   "name": "dataset-app",
   "version": "0.1.0",
+  "description":"My dataset-app",
   "private": true,
   "dependencies": {
     "fetch": "^1.1.0",
@@ -11,7 +12,16 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild":"d2-manifest package.json build/manifest.webapp",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "manifest.webapp":{
+    "icons":{
+      "48":"icon.png"
+    },
+    "developer": {
+      "name": "Dennis"
+    }
   }
 }
